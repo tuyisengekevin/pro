@@ -1,0 +1,26 @@
+body{
+background-color:rgb(196, 197, 195) ;
+
+}
+h1{
+    color: rgb(104, 177, 241);
+}
+form{
+    background-color: white;
+    text-align: center;
+    max-width:400px ;
+    margin: auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px grey;
+}
+#put{
+    width: 50%;
+    text-align: center;
+    font-size: 2em;
+    border-radius: 100px;
+    margin-bottom: 15px;
+}
+#td{
+    margin-bottom: 15px;
+}
