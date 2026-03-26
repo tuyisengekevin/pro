@@ -163,3 +163,20 @@ console.log(ans)
 let nbr=[2,3,4,5,6,6,5];
 let ans=nbr.reduce((acc,next)=>acc+next,0);//acc is start ,0 is initial of acc
 console.log(ans)
+//object oriented
+const person1={
+name:'kevin',
+age:21,
+convo: function(){console.log(`hello im ${this.name}`)}//reference of object where it is used
+}
+console.log(person1.name);
+person1.convo();
+//constructor function help to reuse it
+function car(a,b){
+ this.name=a;
+  this.color=b;
+  this.message=function(){console.log(`u drive ${this.name}`)}
+}
+const car1= new car('ford','red')
+console.log(car1.name)
+car1.message();
