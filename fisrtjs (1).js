@@ -163,13 +163,22 @@ console.log(ans)
 let nbr=[2,3,4,5,6,6,5];
 let ans=nbr.reduce((acc,next)=>acc+next,0);//acc is start ,0 is initial of acc
 console.log(ans)
-//object oriented
+//object oriented//oopp
 const person1={
 name:'kevin',
 age:21,
 convo: function(){console.log(`hello im ${this.name}`)}//reference of object where it is used
 }
-console.log(person1.name);
+console.log(person1.name);//dot notation
+//bracket notation is Used when the key is coming from a variable.
+function solution([m1,m2,d],[um1,um2,ud]) {
+  const G = 6.67e-11 ;
+  const conversion = { kg:1, g:1e-3, mg:1e-6, μg:1e-9, lb:.453592
+                     , m:1, cm:1e-2, mm:1e-3, μm:1e-6, ft:.3048
+                     } ;
+  return G * m1 * conversion[um1] * m2 * conversion[um2] / ( d * conversion[ud] ) ** 2 ;
+}// conversion[key]
+
 person1.convo();
 //constructor function help to reuse it
 function car(a,b){
@@ -182,6 +191,7 @@ console.log(car1.name)
 car1.message();
 //class with constructor
 class Product {
+  static x=1;//static means it belong to class not objects
     constructor(name, price) {   // MUST be called 'constructor'
         this.name = name;
         this.price = price;
@@ -192,3 +202,27 @@ class Product {
 }
 const product1 = new Product("Laptop", 1200);
 product1.displayInfo(); // Works
+product1.x//undefined
+Product.x//1
+//inheritance 
+class Person {        //parent class
+  constructor(name) {
+    this.name = name;
+  }
+  move(speed){console.log(`speed is ${speed}`)}
+}
+
+class Student extends Person {
+  constructor(name, course,speed) {
+    super(name); // takes name to parent class
+    this.course = course;
+    this.speed=speed;
+  }
+  showInfo() {
+    console.log(this.name + " studies " + this.course);
+    super.move(this.speed);//this call method of parent
+  }
+}
+
+const s1 = new Student("Kevin", "JavaScript",200);
+s1.showInfo();
