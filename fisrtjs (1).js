@@ -180,3 +180,15 @@ function car(a,b){
 const car1= new car('ford','red')
 console.log(car1.name)
 car1.message();
+//class with constructor
+class Product {
+    constructor(name, price) {   // MUST be called 'constructor'
+        this.name = name;
+        this.price = price;
+    }
+    displayInfo() {
+        console.log(`Product: ${this.name}, Price: $${this.price}`);
+    }
+}
+const product1 = new Product("Laptop", 1200);
+product1.displayInfo(); // Works
