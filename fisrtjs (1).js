@@ -179,4 +179,14 @@ function car(a,b){
 }
 const car1= new car('ford','red')
 console.log(car1.name)
-car1.message();
+car1.message(); 
+//to string 
+function nbDig(n, d) {
+  let count = 0;
+
+  for (let i = 0; i <= n; i++) {
+    count += (i * i).toString().split(d).length - 1;//split where u see d
+  }
+
+  return count;
+}
