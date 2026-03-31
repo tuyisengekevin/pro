@@ -190,3 +190,24 @@ function nbDig(n, d) {
 
   return count;
 }
+// for..of (used loops over values) and for...in(Use for…in for objects (properties) or arrays (indexes).)
+let str = "123";
+for (let char of str) {
+  console.log(char);
+}
+// Output:
+// "1"...
+let arr = [10, 20, 30];
+for (let index in arr) { 
+  console.log(index); 
+}
+// Output:
+// 0
+// 1..
+let obj = {a: 1, b: 2};
+for (let key in obj) {
+  console.log(key, obj[key]);
+}
+// Output:
+// a 1
+// b 2
