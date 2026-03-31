@@ -111,7 +111,7 @@ function cv(callback){
 function cd(){
   console.log('helda')
 }
-cv(cd);//callback 
+cv(cd);//callback output: hrll helda
 
 //string manupilation 
 phonenbr=phone.replaceall('d','1')
@@ -180,7 +180,7 @@ function solution([m1,m2,d],[um1,um2,ud]) {
 }// conversion[key]
 
 person1.convo();
-//constructor function help to reuse it
+//constructor function help to reuse it in many object
 function car(a,b){
  this.name=a;
   this.color=b;
@@ -226,3 +226,12 @@ class Student extends Person {
 
 const s1 = new Student("Kevin", "JavaScript",200);
 s1.showInfo();
+//destructuring is extract and assign values to new variables in array and object in particular ways
+let a=1;let b=2
+[a,b]=[b,a]//they will swap
+const c=[2,3,4]
+ [x[0],x[1]] =[x[1],x[0]]//destructuring
+ const per1={ name:'sasa' age:12}
+ const {a,c}= per1
+ console.log(a)// sasa
+
