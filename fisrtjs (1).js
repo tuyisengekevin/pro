@@ -266,7 +266,21 @@ let obj = {a: 1, b: 2};
 for (let key in obj) {
   console.log(key, obj[key]);
 }
-// Output:
-// a 1
-// b 2
->>>>>>> 8ce43866f7d78fd0eedf97565bb2e85d5e466f2a
+
+//padstart(stringlength,string to add at stART)
+let word = 'Hi';
+console.log(word.padStart(5, '*')); // ***Hi
+
+//array.fill(value, start, end)
+let arr2 = [1, 2, 3, 4, 5];
+arr2.fill(9, 1, 4);//IF USE FILL(9) CHANGE ALL
+console.log(arr2); // [1, 9, 9, 9, 5]
+
+//str.slice(start, end)
+let s = "56789";
+// take from index 0 to 2 (not including 2)
+console.log(s.slice(0, 2)); // "56"
+// start at index 2, go to the end
+console.log(s.slice(2)); // "789"
+console.log(s.slice(-3)); // "789"
+console.log(s.slice());//56789
